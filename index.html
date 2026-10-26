@@ -1,180 +1,147 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Amey Joseph, Computer Engineering student at the University of North Texas. Explore my skills, projects, and interests.">
   <title>Amey Joseph | Portfolio</title>
-
   <link rel="stylesheet" href="css/bootstrap.min.css">
-
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-    }
-    .hero {
-      background: linear-gradient(135deg, #34316d, #8064b5);
-      color: white;
-      padding: 90px 20px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    .profile-image {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid white;
-      margin-bottom: 20px;
-    }
-    .section-title {
-      color: #34316d;
-      font-weight: bold;
-      margin-bottom: 25px;
-    }
-    .skill {
-      background-color: #e9e4f5;
-      color: #34316d;
-      padding: 10px 18px;
-      border-radius: 20px;
-      display: inline-block;
-      margin: 5px;
-    }
+    :root { --purple: #34316d; --lavender: #8064b5; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; background: #f8f9fc; color: #28283b; }
+    .navbar { background-color: #252344 !important; }
+    .navbar-brand { font-weight: 700; }
+    .hero { background: linear-gradient(90deg, rgba(12,10,33,.92), rgba(29,16,60,.70)), url("coding-background.svg") center / cover no-repeat; color: white; padding: 100px 20px; text-align: center; }
+    .hero h1 { font-size: clamp(2rem, 6vw, 3.3rem); font-weight: 750; }
+    .hero .lead { font-weight: 600; }
+    .hero .btn-light { background: #9c65e9; border-color: #9c65e9; color: white; font-weight: 700; }
+    .hero .btn-light:hover { background: #814cce; border-color: #814cce; color: white; }
+    .profile-image { width: 170px; height: 170px; object-fit: cover; border-radius: 50%; border: 5px solid white; margin-bottom: 22px; box-shadow: 0 8px 25px #17133844; }
+    .section-title { color: var(--purple); font-weight: 750; margin-bottom: 26px; }
+    .section-title::after { content: ''; display: block; width: 55px; height: 4px; margin-top: 10px; border-radius: 10px; background: var(--lavender); }
+    .content-section { padding-top: 72px; padding-bottom: 72px; scroll-margin-top: 65px; }
+    .about-copy { max-width: 850px; line-height: 1.85; font-size: 1.05rem; }
+    .skill { background: #eee8fa; color: var(--purple); padding: 10px 18px; border-radius: 30px; display: inline-block; margin: 5px; font-weight: 600; }
+    .card { border: 1px solid #e9e6f1; border-radius: 16px; height: 100%; }
+    .card-body { padding: 25px; }
+    .card h3 { color: var(--purple); font-size: 1.22rem; font-weight: 700; }
+    .btn-purple { background: var(--purple); border-color: var(--purple); color: white; }
+    .btn-purple:hover, .btn-purple:focus { background: #25234e; border-color: #25234e; color: white; }
+    .muted-note { color: #666477; }
+    .quick-facts { background: #f0ebfb; border-radius: 18px; padding: 26px; }
+    .quick-facts p { margin-bottom: 12px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .hero-actions .btn-outline-light:hover { color: #34316d; }
+    .project-card { transition: transform .2s ease, box-shadow .2s ease; }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(52,49,109,.14) !important; }
+    .nav-link:focus-visible, .btn:focus-visible { outline: 3px solid #c8b4f6; outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .project-card { transition: none; } }
+    footer { background: #252344; }
+    @media (max-width: 576px) { .hero { padding: 65px 16px; } .profile-image { width: 145px; height: 145px; } .content-section { padding-top: 50px; padding-bottom: 50px; } }
   </style>
 </head>
-
 <body>
-
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Amey Joseph</a>
-
-    <button class="navbar-toggler" type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#education">Education</a>
-        <a class="nav-link" href="#projects">Projects</a>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Amey Joseph</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-
-<header class="hero">
-  <div class="container">
-    <img src="profile.jpg"
-         alt="AJ profile placeholder"
-         class="profile-image">
-
-    <h1>Hello, I'm Amey Joseph</h1>
-    <p class="lead">Computer Engineering Student</p>
-    <p>University of North Texas</p>
-    <a href="#about" class="btn btn-light btn-lg mt-3">
-      Learn More About Me
-    </a>
-  </div>
-</header>
-
-<section id="about" class="container py-5">
-  <h2 class="section-title">About Me</h2>
-  <p>
-    Hi! My name is Amey Joseph, and I am a Computer
-    Engineering student at the University of North Texas.
-    I enjoy learning about programming, technology,
-    cybersecurity, and software development.
-  </p>
-  <p>
-    I am passionate about expanding my technical skills,
-    solving problems, and exploring new opportunities
-    in the technology industry.
-  </p>
-</section>
-
-<section id="skills" class="bg-white py-5">
-  <div class="container">
-    <h2 class="section-title">Technical Skills</h2>
-    <span class="skill">C++</span>
-    <span class="skill">Java</span>
-    <span class="skill">Python</span>
-    <span class="skill">HTML &amp; CSS</span>
-    <span class="skill">Git &amp; GitHub</span>
-    <span class="skill">Linux</span>
-    <span class="skill">Problem Solving</span>
-  </div>
-</section>
-
-<section id="education" class="container py-5">
-  <h2 class="section-title">Education</h2>
-
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <h4>University of North Texas</h4>
-      <p class="mb-1">Bachelor of Science in Computer Engineering</p>
-      <p class="text-muted">
-        Expected Graduation: December 2027
-      </p>
-      <p>GPA: 3.41</p>
+  <header id="home" class="hero">
+    <div class="container">
+      <img src="profile.jpg" alt="Portrait of Amey Joseph" class="profile-image">
+      <h1>Hello, I'm Amey Joseph</h1>
+      <p class="lead mb-1">Computer Engineering Student</p>
+      <p>University of North Texas</p>
+      <p class="mb-3">Interested in technology, creative problem solving, and meaningful projects.</p>
+      <div class="hero-actions mt-3">
+        <a href="#projects" class="btn btn-light btn-lg">View My Projects</a>
+        <a href="#contact" class="btn btn-outline-light btn-lg">Contact Me</a>
+      </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="projects" class="container py-5">
-  <h2 class="section-title">My Projects</h2>
-
-  <div class="card shadow-sm mb-3">
-    <div class="card-body">
-      <h4>C++ Data Structures</h4>
-      <p>
-        Developed programs using linked lists,
-        stacks, queues, and trees. Practiced
-        sorting algorithms and debugging.
-      </p>
+  <section id="about" class="content-section container">
+    <h2 class="section-title">About Me</h2>
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-8">
+    <div class="about-copy">
+      <p>Hi! I'm Amey Joseph, a Computer Engineering student at the University of North Texas, expecting to graduate in December 2027.</p>
+      <p>I've always been curious about how technology works and how it can be used to solve problems in everyday life. Throughout my studies, I've developed a strong interest in software development, cybersecurity, and computer systems. I enjoy learning new programming languages, working on projects, and finding creative solutions to technical challenges. Every experience has helped me build my skills and become more confident in what I do.</p>
+      <p>Outside of academics, I enjoy cars, especially classic and vintage models, listening to music, watching movies, drawing, and playing badminton. I also love traveling, exploring new places, and experiencing different cultures. These interests allow me to express my creativity and maintain a balance between my personal life and academic goals.</p>
+      <p>As I continue my journey in Computer Engineering, my goal is to gain practical experience through internships, strengthen my technical knowledge, and explore different opportunities in the technology industry. I'm excited to keep learning, meet new people, and eventually build a career where I can make a meaningful contribution through technology.</p>
     </div>
-  </div>
-
-  <div class="card shadow-sm mb-3">
-    <div class="card-body">
-      <h4>Digital Logic Design</h4>
-      <p>
-        Worked with Boolean algebra, logic gates,
-        and truth tables to understand digital
-        circuit design.
-      </p>
+      </div>
+      <div class="col-lg-4">
+        <aside class="quick-facts" aria-label="Quick facts">
+          <h3 class="h5 fw-bold">Quick Facts</h3>
+          <p><strong>Studying:</strong> Computer Engineering at UNT</p>
+          <p><strong>Graduation:</strong> December 2027</p>
+          <p><strong>GPA:</strong> 3.41</p>
+          <p class="mb-0"><strong>Interests:</strong> Cars, music, movies, drawing, badminton, and travel</p>
+        </aside>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <h4>Personal Portfolio Website</h4>
-      <p>
-        Created and deployed a responsive personal
-        portfolio website using HTML, CSS,
-        Bootstrap, GitHub, and AWS Amplify.
-      </p>
+  <section id="skills" class="content-section bg-white">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div aria-label="Technical skills">
+        <span class="skill">C++</span><span class="skill">Java</span><span class="skill">Python</span><span class="skill">HTML &amp; CSS</span><span class="skill">Bootstrap</span><span class="skill">Git &amp; GitHub</span><span class="skill">Linux</span><span class="skill">VS Code</span><span class="skill">Problem Solving</span>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="bg-dark text-white text-center py-4">
-  <p class="mb-1">Amey Joseph | Personal Portfolio</p>
-  <p class="mb-0">Built with Bootstrap 5</p>
-</footer>
+  <section id="education" class="content-section container">
+    <h2 class="section-title">Education</h2>
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h3>University of North Texas</h3>
+        <p class="mb-2">Bachelor of Science in Computer Engineering</p>
+        <p class="muted-note mb-2">Expected Graduation: December 2027</p>
+        <p class="mb-0">GPA: 3.41</p>
+      </div>
+    </div>
+  </section>
 
-<script src="js/bootstrap.bundle.min.js"></script>
+  <section id="projects" class="content-section bg-white">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4"><article class="card shadow-sm project-card"><div class="card-body"><h3>C++ Data Structures</h3><p class="mb-0">Developed programs using linked lists, stacks, queues, and trees. Practiced sorting algorithms, debugging, and writing organized code.</p></div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="card shadow-sm project-card"><div class="card-body"><h3>Digital Logic Design</h3><p class="mb-0">Worked with Boolean algebra, logic gates, and truth tables to understand the foundations of digital circuit design.</p></div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="card shadow-sm project-card"><div class="card-body"><h3>Personal Portfolio Website</h3><p class="mb-0">Created and deployed this responsive portfolio using HTML, CSS, Bootstrap, GitHub, and AWS Amplify.</p></div></article></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="content-section container">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="card shadow-sm"><div class="card-body">
+      <h3>Let's Connect</h3>
+      <p>I'm interested in internship opportunities and connecting with people in the technology industry. Feel free to explore my GitHub projects or reach out to learn more about my work.</p>
+      <a href="https://github.com/Ameyjoseph" class="btn btn-purple" target="_blank" rel="noopener noreferrer">Visit My GitHub</a>
+    </div></div>
+  </section>
+
+  <footer class="text-white text-center py-4">
+    <p class="mb-1">Amey Joseph | Personal Portfolio</p>
+    <p class="mb-0">Built with Bootstrap 5 and hosted on AWS Amplify</p>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

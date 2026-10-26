@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="850" viewBox="0 0 1600 850">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0c1022"/><stop offset=".55" stop-color="#1b1437"/><stop offset="1" stop-color="#0b1024"/></linearGradient><radialGradient id="glow"><stop stop-color="#a24cff" stop-opacity=".5"/><stop offset="1" stop-color="#a24cff" stop-opacity="0"/></radialGradient><filter id="blur"><feGaussianBlur stdDeviation="36"/></filter></defs>
+<rect width="1600" height="850" fill="url(#bg)"/><ellipse cx="1220" cy="340" rx="560" ry="480" fill="url(#glow)" filter="url(#blur)"/>
+<g transform="translate(750 45) rotate(-4)" font-family="monospace" font-size="27" opacity=".8">
+<rect x="0" y="0" width="870" height="790" rx="22" fill="#0a0e20" stroke="#6250a0" stroke-width="3"/><rect x="0" y="0" width="870" height="55" rx="22" fill="#252444"/><circle cx="30" cy="28" r="8" fill="#e36b9d"/><circle cx="56" cy="28" r="8" fill="#e5c067"/><circle cx="82" cy="28" r="8" fill="#69c4aa"/>
+<g fill="#727a9d" font-size="20"><text x="32" y="115">01</text><text x="32" y="162">02</text><text x="32" y="209">03</text><text x="32" y="256">04</text><text x="32" y="303">05</text><text x="32" y="350">06</text><text x="32" y="397">07</text><text x="32" y="444">08</text><text x="32" y="491">09</text><text x="32" y="538">10</text><text x="32" y="585">11</text><text x="32" y="632">12</text></g>
+<text x="100" y="115" fill="#bb91ff">const</text><text x="205" y="115" fill="#f4d489"> developer</text><text x="380" y="115" fill="#d8d8ef"> = {</text>
+<text x="130" y="162" fill="#76d4e9">name:</text><text x="270" y="162" fill="#e5b6a7"> 'Amey Joseph',</text>
+<text x="130" y="209" fill="#76d4e9">major:</text><text x="270" y="209" fill="#e5b6a7"> 'Computer Engineering',</text>
+<text x="130" y="256" fill="#76d4e9">focus:</text><text x="270" y="256" fill="#e5b6a7"> 'Building ideas',</text>
+<text x="100" y="303" fill="#d8d8ef">};</text>
+<text x="100" y="397" fill="#bb91ff">function</text><text x="255" y="397" fill="#f4d489"> createFuture</text><text x="480" y="397" fill="#d8d8ef">() {</text>
+<text x="130" y="444" fill="#bb91ff">return</text><text x="250" y="444" fill="#e5b6a7"> 'Learn. Build. Grow.';</text>
+<text x="100" y="491" fill="#d8d8ef">}</text>
+<text x="100" y="585" fill="#7cbda9">// creativity meets technology</text>
+<text x="100" y="632" fill="#76d4e9">console</text><text x="218" y="632" fill="#d8d8ef">.log(</text><text x="308" y="632" fill="#f4d489">createFuture</text><text x="500" y="632" fill="#d8d8ef">());</text>
+</g><rect width="1600" height="850" fill="#0a0820" opacity=".18"/>
+</svg>
